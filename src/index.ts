@@ -1,5 +1,9 @@
+export const eslintReactDefault = {
+  extends: ['../eslintrc.react.json'],
+};
+
 export const eslintDefault = {
-  extends: ['../.eslintrc.react.json'],
+  extends: ['../.eslintrc.cjs'],
 };
 export const prettierDefault = {
   arrowParens: 'always',
