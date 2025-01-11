@@ -1,6 +1,5 @@
 module.exports = {
   env: {
-    browser: true,
     jest: true,
     'shared-node-browser': true,
     es2021: true,
@@ -10,13 +9,12 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:import/warnings',
     'plugin:jest/recommended',
     'prettier',
-    'plugin:react/recommended',
   ],
   plugins: ['@typescript-eslint', 'jest', 'prettier', 'simple-import-sort'],
   overrides: [
@@ -31,13 +29,11 @@ module.exports = {
     },
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
   rules: {
     '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-unsafe-assignment': 0,
+    '@typescript-eslint/no-unsafe-assignment': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -52,6 +48,5 @@ module.exports = {
     'no-console': 'warn',
     'object-shorthand': 'warn',
     'simple-import-sort/exports': 'error',
-    'simple-import-sort/imports': 'error',
   },
 };

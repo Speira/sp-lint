@@ -1,24 +1,28 @@
 {
   "extends": [
-    "./.eslintrc.cjs",
-    "airbnb",
-    "airbnb/hooks",
-    "airbnb-typescript",
-    "prettier",
-    "plugin:react-hooks/recommended"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "./.eslintrc.cjs"
   ],
   "env": {
     "browser": true,
     "jest": true
   },
-  "plugins": ["better-styled-components", "react", "simple-import-sort"],
+  "plugins": ["react"],
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
   },
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "overrides": [
     {
@@ -33,10 +37,12 @@
               ["^\\u0000"],
               ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
               ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-              ["^.+\\.?(css)$"]
+              ["^.+\\.?(css|scss)$"]
             ]
           }
-        ]
+        ],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
       }
     }
   ]

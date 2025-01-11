@@ -1,3 +1,3 @@
 export default {
-  extends: ['../.eslintrc.react.cjs'],
+  extends: ['../.eslintrc.react.json'],
 };
