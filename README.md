@@ -10,10 +10,18 @@ npm i -D @speira/lint
 
 ## Usage
 
-In your `.prettierrc.cjs` file :
+In your `prettier.config.js` file :
 
 ```js
-const { prettierDefault } = require('@speira/lint');
+import speiraPrettier from '@speira/lint/prettier';
 
-module.exports = prettierDefault;
+export default speiraPrettier;
+```
+
+In your `eslint.config.js` file :
+
+```js
+import speiraEslint from '@speira/lint/eslint';
+
+export default [...speiraEslint];
 ```
